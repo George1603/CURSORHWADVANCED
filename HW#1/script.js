@@ -7,8 +7,11 @@ console.log ('milk:', milk);
 console.log ('meat:', meat);
 console.log ('eggs:', eggs);
 
-console.log ('max price:', Math.max(milk, meat, eggs));
-console.log ('min price:', Math.min(milk, meat, eggs));
+let max = Math.max(milk, meat, eggs);
+console.log ('max price:', max);
+
+let min = Math.min(milk, meat, eggs);
+console.log ('min price:', min);
 
 let costOfGoods = (milk + meat + eggs);
 console.log ('cost of goods:', costOfGoods)
@@ -28,3 +31,35 @@ console.log ('boolean:', bool);
 let remainder = 500 - costOfGoods;
 console.log ('remainder:', remainder);
 
+let averagePrice = costOfGoods / 3;
+let roundedAmount = Math.round (averagePrice * 100) / 100;
+console.log ('rounded amount:', roundedAmount);
+
+//More difficult
+
+let discount = (Math.random ()*10) + 5;
+console.log ('discount:', discount)
+
+let goodsWithDiscount = Math.round ((costOfGoods - discount) * 100) / 100;
+console.log ('goods with discount:', goodsWithDiscount);
+
+let netProfit = ((costOfGoods / 2) - discount).toFixed(2);
+console.log ('net profit:', netProfit);
+
+//Advanced
+
+let allValues = `
+max price: ${max}
+min price: ${min}
+cost of goods: ${costOfGoods}
+opportunity cost of goods: ${opportunityCostOfGoods}
+round price: ${roundPrice}
+floor cost: ${floorPrice}
+boolean: ${bool}
+remainder: ${remainder}
+rounded amount: ${roundedAmount}
+discount: ${discount}
+goods with discount: ${goodsWithDiscount}
+net profit: ${netProfit}
+`;
+console.log (allValues);
